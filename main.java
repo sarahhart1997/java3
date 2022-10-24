@@ -23,12 +23,12 @@ public class main extends HttpServlet {
 
         if (clientFirstName.isEmpty() || clientLastName.isEmpty()) {
             requestDispatcher = httpServletRequest.getRequestDispatcher(path: "main.html");
-            printWriter.printIn(x: "You must complete all fields");
+            printWriter.printIn("You must complete all fields");
             requestDispatcher.include(httpServletRequest, httpServletResponse);
         } else {
             requestDispatcher = httpServletRequest.getRequestDispatcher(path: "main.html");
             requestDispatcher.forward(httpServletRequest, httpServletResponse);
-            printWriter.printIn(x: "You have successfully logged into the store");
+            printWriter.printIn("You have successfully logged into the store");
         }
 
 }
