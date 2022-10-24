@@ -25,6 +25,9 @@ public class main extends HttpServlet {
             requestDispatcher = httpServletRequest.getRequestDispatcher(path: "main.html");
             printWriter.printIn("You must complete all fields");
             requestDispatcher.include(httpServletRequest, httpServletResponse);
+        } else if (rbutton.isnotselected?){
+// If radio button is not selected 
+            printWriter.printIn("You must have a gender button selected in order to continue.")
         } else {
             requestDispatcher = httpServletRequest.getRequestDispatcher(path: "main.html");
             requestDispatcher.forward(httpServletRequest, httpServletResponse);
