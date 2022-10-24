@@ -22,3 +22,18 @@
     <input type="SUBMIT" value="SUBMIT"/>
     </form>
 </body>
+
+<!-- After Submission HTML -->
+<head>
+    <title>Welcome to my Shop</title>
+</head>
+
+<body>
+    <% String first_name = request.getParameter("first_name");
+    String last_name = request.getParameter("last_name");
+    %>
+    
+    Thank you 
+    <!-- Somehow dynamically produce Mr. Ms. blank based on gender answer-->
+    <%= first_name %> <%= last_name %>
+</body>
