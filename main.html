@@ -11,6 +11,12 @@
             <td> First Name </td>
             <td><input type="text" name="first_name"/></td>
         </tr></p>
+        <td><label>Gender:</label></td>
+        <td>
+            <input id="radio_male" type="radio" /><span>Male</span>
+            <input id="radio_female" type="radio"/><span>Female</span>
+            <input id="radio_other" type="radio"/><span>Other</span>
+        </td>
         <p><tr>
             <td> Last Name </td>
             <td><input type="text" name="last_name"/></td>
@@ -32,7 +38,7 @@
     <% String first_name = request.getParameter("first_name");
     String last_name = request.getParameter("last_name");
     %>
-    
+
     Thank you 
     <!-- Somehow dynamically produce Mr. Ms. blank based on gender answer-->
     <%= first_name %> <%= last_name %>
